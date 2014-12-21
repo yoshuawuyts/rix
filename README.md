@@ -23,17 +23,22 @@ button.on('render', function(dom, state, props) {
 button.on('mount', function(instance, el, state, props) {
  // do other stuff
 })
+
+button.render(document.querySelector('body'))
 ```
 
 ## Why?
 React is getting bloated and doesn't play nice with the DOM. There are some
 alternatives like [deku](https://github.com/segmentio/deku) but they all have
-short comings. What we need is a library that plays well with the dom, uses js,
+shortcomings. What we need is a library that plays well with the dom, uses js,
 has a virtual dom and a very small interface. Rix tries to be that library.
 
 ## See Also
-- [wayfarer](https://github.com/yoshuawuyts/wayfarer)
-- [barracks](https://github.com/yoshuawuyts/barracks)
+- [wayfarer](https://github.com/yoshuawuyts/wayfarer) - tiny client router
+- [barracks](https://github.com/yoshuawuyts/barracks) - event dispatcher
+- [deku](https://github.com/segmentio/deku) - duo/component ui lib
+- [ractive](https://github.com/ractivejs/ractive) - lib focused on data binding
+- [react](https://github.com/facebook/react) - mother of virtual doms
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
