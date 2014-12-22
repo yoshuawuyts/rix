@@ -45,9 +45,9 @@ function handleClick(el, state, props, e) {
 
 ## Why?
 Nowadays there's plenty of choice in ui libraries that have a virtual dom.
-Unfortunately they all have shortcomings in terms of usability, scope or
-learning curve. Rix tries to merge the best ideas from those libraries and
-wrap them in a nice, event-based interface.
+Unfortunately they're either hard to learn, lack features or are just not very
+user friendly. Rix tries to merge the best ideas from those libraries and
+wrap them in a clean, event-based interface.
 
 ## See Also
 - [wayfarer](https://github.com/yoshuawuyts/wayfarer) - tiny client router
