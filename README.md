@@ -19,14 +19,13 @@ $ npm install rix
 
 ## Usage
 ```js
-const rix    = require('rix')
-const button = rix.dom()
+const rix = require('rix')
 
-button.on('render', function(dom, state, props) {
-  return dom('button', null, ['click me']);
+const button = rix.dom((dom, state, props) => {
+  return dom('button', null, ['click me'])
 })
 
-button.on('mount', function(instance, el, state, props) {
+button.on('mount', (instance, el, state, props) => {
  // do other stuff
 })
 
