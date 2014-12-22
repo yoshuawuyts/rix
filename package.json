@@ -4,17 +4,19 @@
   "description": "rix",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test tape test.js | tap-bail |tap-spec",
-    "test-cov": "NODE_ENV=test istanbul cover test.js",
+    "test": "NODE_ENV=test browserify test.js | smokestack -b chrome | tap-spec",
     "lint": "eslint ."
   },
   "repository": "yoshuawuyts/rix",
   "keywords": [],
   "license": "MIT",
   "dependencies": {
+    "global": "^4.3.0",
+    "raf": "^2.0.4",
     "virtual-dom": "0.0.24"
   },
   "devDependencies": {
+    "browserify": "^7.0.3",
     "eslint": "^0.10.2",
     "istanbul": "^0.3.5",
     "smokestack": "^2.0.0",

@@ -2,51 +2,41 @@
 Rix uses an event system very similar to react. The way that events are
 exposed is similar to node's `require('events').EventEmitter`.
 
-###### render
 ```js
-button.on('render', function(dom, state, props) {
-  return dom('button', null, ['click me']);
-})
+button.on('beforeMount', (el, state, props) {})
+button.on('mount', (el, state, props) {})
+button.on('afterMount', (el, state, props) {})
+button.on('shouldUpdate', (el, state, props) {})
+button.on('beforeUpdate', (el, state, props) {})
+button.on('afterUpdate', (el, state, props) {})
 ```
 
 ###### beforeMount
 ```js
-button.on('beforeMount', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('beforeMount', (el, state, props) {})
 ```
 
 ###### mount
 ```js
-button.on('mount', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('mount', (el, state, props) {})
 ```
 
 ###### afterMount
 ```js
-button.on('afterMount', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('afterMount', (el, state, props) {})
 ```
 
 ###### beforeUpdate
 ```js
-button.on('beforeUpdate', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('beforeUpdate', (el, state, props) {})
 ```
 
 ###### afterUpdate
 ```js
-button.on('afterUpdate', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('afterUpdate', (el, state, props) {})
 ```
 
 ###### shouldUpdate
 ```js
-button.on('shouldUpdate', function(instance, el, state, props) {
- // do other stuff
-})
+button.on('shouldUpdate', (el, state, props) {})
 ```
