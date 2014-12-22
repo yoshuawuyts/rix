@@ -22,14 +22,25 @@ $ npm install rix
 const rix = require('rix')
 
 const button = rix.dom((dom, state, props) => {
-  return dom('button', null, ['click me'])
+  return dom('button', { onClick: handleClick }, [state.text])
 })
 
-button.on('mount', (instance, el, state, props) => {
- // do other stuff
+button.on('mount', (el, state, props) => {
+  state = {
+    text: 'click me',
+    count: 0
+  }
 })
 
 document.body.appendChild(rix.createElement(button))
+
+function handleClick(el, state, props, e) {
+  const count = state.count++
+  state = {
+    text: 'clicked ' + count + ' times',
+    count: count
+  }
+}
 ```
 
 ## Why?
