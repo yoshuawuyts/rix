@@ -20,8 +20,8 @@ test('should expose `dom()`', function(t) {
   t.end()
 })
 
-// require('./dom/test')
-// require('./createElement/test')
+require('./dom/test')
+require('./create-element/test')
 
 test('shutdown', function(t) {
   t.plan(0)

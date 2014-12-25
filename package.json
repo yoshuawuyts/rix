@@ -4,7 +4,7 @@
   "description": "rix",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test browserify test.js | smokestack -b chrome | tap-spec",
+    "test": "NODE_ENV=test browserify test.js | smokestack -b chrome | faucet",
     "lint": "eslint ."
   },
   "repository": "yoshuawuyts/rix",
@@ -17,11 +17,12 @@
   },
   "devDependencies": {
     "browserify": "^7.0.3",
+    "double-tap": "^1.0.1",
     "eslint": "^0.10.2",
+    "faucet": "0.0.1",
     "istanbul": "^0.3.5",
     "smokestack": "^2.0.0",
     "tap-bail": "0.0.0",
-    "tap-spec": "^2.1.2",
     "tape": "^3.0.3"
   },
   "files": [
