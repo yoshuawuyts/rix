@@ -24,9 +24,9 @@ require('./dom/test')
 require('./create-element/test')
 
 test('shutdown', function(t) {
-  t.plan(0)
+  t.plan(1)
   setTimeout(function() {
     window.close()
   }, 10)
-  t.end()
+  t.ok(true, 'end')
 })

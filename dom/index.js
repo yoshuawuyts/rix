@@ -1,5 +1,6 @@
+
+const h      = require('virtual-dom/h')
 const assert = require('assert')
-var h = require('virtual-dom/h');
 
 module.exports = dom
 
