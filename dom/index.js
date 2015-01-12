@@ -9,10 +9,10 @@ module.exports = dom
 // @param  {Mixed[]}     children
 // @return {Object}
 function dom(type, props, children) {
-  assert(typeof type, 'string')
+  assert.equal(typeof type, 'string')
 
   props = props || {}
-  children = children.isArray ? children : [children]
+  children = Array.isArray(children) ? children : [children]
 
   return h(type, props, children)
 }
